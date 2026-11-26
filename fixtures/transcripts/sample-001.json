@@ -1,0 +1,38 @@
+{
+  "fixture_id": "sample-001",
+  "schema_version": "0.1.0",
+  "caller_id": "caller-0007",
+  "note": "Pilot item. Carries one planted instance of each of the four classes so the pipeline can be exercised end to end before the full fixture is authored.",
+  "sessions": [
+    {
+      "session_id": "s-2026-09-02-01",
+      "timestamp": "2026-09-02T10:14:00Z",
+      "turns": [
+        { "speaker": "agent", "text": "Thank you for calling. How can I help today?" },
+        { "speaker": "caller", "text": "I would like the order delivered to my home address." },
+        { "speaker": "agent", "text": "Noted, delivery to your home address." },
+        { "speaker": "caller", "text": "It has been unusually warm this week, hasn't it?" },
+        { "speaker": "agent", "text": "It certainly has. Anything else I can help with?" }
+      ]
+    },
+    {
+      "session_id": "s-2026-09-15-01",
+      "timestamp": "2026-09-15T15:02:00Z",
+      "turns": [
+        { "speaker": "caller", "text": "One more thing, I prefer the dark display mode in the app." },
+        { "speaker": "agent", "text": "I have recorded that preference." },
+        { "speaker": "caller", "text": "Also please keep on file that I am allergic to peanuts." },
+        { "speaker": "agent", "text": "Recorded. I will make sure that stays on your file." }
+      ]
+    },
+    {
+      "session_id": "s-2026-10-14-01",
+      "timestamp": "2026-10-14T09:41:00Z",
+      "turns": [
+        { "speaker": "caller", "text": "Please change the delivery to my office from now on. Nobody is home during the day." },
+        { "speaker": "agent", "text": "Updated to your office address." },
+        { "speaker": "caller", "text": "And I still like the darker screen setting, keep that as it is." }
+      ]
+    }
+  ]
+}
