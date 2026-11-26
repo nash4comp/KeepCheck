@@ -1,0 +1,20 @@
+# Run outputs are reproducible from fixtures and are not versioned.
+results/
+
+# Secrets. API keys are injected from the environment, never committed (NFR-05).
+.env
+.env.*
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
