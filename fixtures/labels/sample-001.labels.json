@@ -1,0 +1,49 @@
+{
+  "fixture_id": "sample-001",
+  "schema_version": "0.1.0",
+  "note": "Ground truth for sample-001. This file is readable by the scorer identity only. The pipeline must never open this path (NFR-06), because a pipeline that could see the must_keep marks would protect exactly those items and void the loss-rate measurement.",
+  "planted": [
+    {
+      "item_id": "c-01",
+      "class": "contradiction",
+      "sources": ["s-2026-09-02-01", "s-2026-10-14-01"],
+      "expected": "retain_latest",
+      "expected_value": "Delivery address is the office.",
+      "superseded_value": "Delivery address is the home.",
+      "scored_by": "contradiction_resolution_accuracy"
+    },
+    {
+      "item_id": "d-01",
+      "class": "duplicate",
+      "sources": ["s-2026-09-15-01", "s-2026-10-14-01"],
+      "expected": "merge_into_one",
+      "expected_value": "Prefers dark display mode.",
+      "surface_forms": ["dark display mode", "darker screen setting"],
+      "scored_by": "duplicate_reduction"
+    },
+    {
+      "item_id": "n-01",
+      "class": "noise",
+      "sources": ["s-2026-09-02-01"],
+      "expected": "discard",
+      "description": "Small talk about the weather, with no reuse value.",
+      "scored_by": "noise_pruning"
+    },
+    {
+      "item_id": "k-01",
+      "class": "must_keep",
+      "sources": ["s-2026-09-15-01"],
+      "expected": "survive",
+      "expected_value": "Allergic to peanuts.",
+      "stratum": "conventional_transcription",
+      "scored_by": "critical_information_loss"
+    }
+  ],
+  "target_composition": {
+    "contradiction_pairs": 20,
+    "duplicate_pairs": 20,
+    "noise_items": 30,
+    "must_keep_items": 30,
+    "must_keep_strata": ["conventional_transcription", "unconventional_transcription"]
+  }
+}
